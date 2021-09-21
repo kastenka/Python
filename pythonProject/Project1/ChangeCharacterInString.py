@@ -6,7 +6,7 @@ myStr = list(myStr)
 myStr[3] = 'h'
 print(f'{myStr} has {type(myStr)}')
 
-myStr = ''.join(myStr)
+myStr = ''.join(myStr)  # Объединить с пустым разделителем
 print(f'{myStr} has {type(myStr)}')
 
 
