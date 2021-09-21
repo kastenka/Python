@@ -12,10 +12,10 @@ print('{} - first arg, {} - second arg'.format('0000', 'NewArg2'))  # номер
 
 # Версии 3.6+
 str1 = 'str3.6+'
-print(f'str1= {str1}')
+print(f'str1= {str1}')  # str1=str3.6+
 
 # Версии 3.8+
-print(f'{str1=}')
+print(f'{str1=}')  # str1='str3.6+'
 
 
 
