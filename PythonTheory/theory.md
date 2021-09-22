@@ -17,3 +17,9 @@ https://pythonworld.ru/osnovy/formatirovanie-strok-operator.html
 
 
 ![image](https://user-images.githubusercontent.com/23183802/134303489-a0b10594-e22e-4135-a2fe-c52e6e963f9b.png)
+
+
+классы
+
+https://younglinux.info/oopython/inheritance
+
