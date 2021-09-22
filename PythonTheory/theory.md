@@ -13,3 +13,7 @@ https://developer.mozilla.org/ru/docs/Learn/Server-side/Django/skeleton_website
 
 https://pythonworld.ru/osnovy/formatirovanie-strok-operator.html
 ![image](https://user-images.githubusercontent.com/23183802/134179580-56cdedf7-d685-4f4a-855b-5e63fe17212d.png)
+
+
+
+![image](https://user-images.githubusercontent.com/23183802/134303489-a0b10594-e22e-4135-a2fe-c52e6e963f9b.png)
