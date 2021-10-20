@@ -4,6 +4,7 @@ Write a function that will return the count of distinct case-insensitive alphabe
 and numeric digits that occur more than once in the input string. The input string can be assumed
 to contain only alphabets (both uppercase and lowercase) and numeric digits.
 """
+from collections import Counter
 
 
 # Variant 1
@@ -30,5 +31,12 @@ def duplicate_count2(text):
     return dup_count
 
 
+# Variant 3
+def duplicate_count3(text):
+    text = Counter(text.lower())
+    dup_count = len([c for c in text.values() if c > 1])
+    return dup_count
+
+
 input_string = 'aAbcAaBB1i11'
-print(duplicate_count2(input_string))
+print(duplicate_count3(input_string))
