@@ -14,6 +14,12 @@ def array_diff(a, b):
     return array
 
 
+# Variant 2
+def array_diff2(a, b):
+    array = [i for i in a if i not in b]
+    return array
+
+
 array1 = [1, 2, 2]
 array2 = [2]
 print(array_diff(array1, array2))
