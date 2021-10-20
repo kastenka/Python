@@ -5,6 +5,7 @@ and numeric digits that occur more than once in the input string. The input stri
 to contain only alphabets (both uppercase and lowercase) and numeric digits.
 """
 from collections import Counter
+from re import findall
 
 
 # Variant 1
@@ -38,5 +39,17 @@ def duplicate_count3(text):
     return dup_count
 
 
+# Variant 4
+def duplicate_count4(text):
+    # преобразование списка в строку с помощью join
+    # https://regex101.com/r/zlZcC2/1
+    # \w - матчит букво-циферные символы
+    # \1 - это ссылка на группу 1, т.е. соответствует тому, чего найдётся в первых скобках
+    # + - означает предыдущая последовательность (\1 в данном случае) повторяется 1 и более раз
+    # сортируем текст, чтобы регулярка проверяла повтор символов
+    dup_count = len(findall(r"(\w)\1+", "".join(sorted(text.lower())))) 
+    return dup_count
+
+
 input_string = 'aAbcAaBB1i11'
-print(duplicate_count3(input_string))
+print(duplicate_count4(input_string))
