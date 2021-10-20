@@ -26,7 +26,7 @@ def duplicate_count(text):
 def duplicate_count2(text):
     text = text.lower()
     # using set to make the text without duplicates
-    # using count to count the number of duplicates
+    # using count to count the number of duplicates of each character
     dup_count = len([j for j in set(text) if text.count(j) > 1])  # number of duplicates in text
     return dup_count
 
