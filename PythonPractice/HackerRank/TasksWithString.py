@@ -27,7 +27,14 @@ def mutate_string(string, position, character):
     return string[:position] + character + string[position+1:]
 
 
+# TASK5: You are asked to ensure that the first and last names of people begin with a capital letter in their passports.
+# For example, alison heck should be capitalised correctly as Alison Heck.
+def solve(s):
+    return " ".join(i.capitalize() for i in s.split(" "))
+
+
 print("TASK1:  " + swap_case("hELLO fROM hell"))
 print("TASK2:  " + split_and_join("S T R I N G"))
 print("TASK3:  " + str(count_substring("LCACACL", "CAC")))
 print("TASK4:  " + mutate_string("LALALA", 2, "w"))
+print("TASK5:  " + mutate_string("masha kastenka"))
