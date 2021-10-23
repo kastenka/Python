@@ -4,7 +4,8 @@
 
 def swap_case(s):
     return "".join(i.lower() if i.isupper() else i.upper() for i in s)
-
+    # or another variant: 
+    # return s.swapcase()
 
 # TASK2: You are given a string. Split the string on a " " (space) delimiter and join using a - hyphen.
 def split_and_join(line):
