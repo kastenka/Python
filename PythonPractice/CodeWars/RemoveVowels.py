@@ -28,7 +28,7 @@ def disemvowel3(string_):
 # Variant №4 using flags
 def disemvowel4(string_):
     vowels = "aeiou"  # Note: for this kata y isn't considered a vowel.
-    string_ = "".join(i for i in string_ if i.lower in vowels)
+    string_ = "".join(i for i in string_ if i.lower not in vowels)
     return string_
 
 
