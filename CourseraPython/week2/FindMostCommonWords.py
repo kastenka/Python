@@ -1,0 +1,46 @@
+import operator
+from collections import Counter
+
+
+zen = """Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!"""
+
+# Variant 1
+zen_map = dict()
+for word in zen.split():  # используя split, разбиваем текст на слова, разделитель - пробел. Запись в список
+    cleaned_word = word.strip(".,!-*").lower()  # используя strip, убираем указанные символы в начале и конце строки
+    if cleaned_word not in zen_map:  # проверка на наличие слова в словаре
+        zen_map[cleaned_word] = 0  # если слова еще нет, то добавляем
+    zen_map[cleaned_word] += 1  # если слово уже есть, то увеличиваем число повторов на 1
+
+zen_items = zen_map.items()  # представление элементов словаря - возвращает список словаря (ключ, значение)
+word_count_items = sorted(
+    zen_items, key=operator.itemgetter(1), reverse=True  # operator для сортировки по опред. элементу
+)
+print(word_count_items[:3])
+
+# Variant 2 - using Counter
+cleaned_list = []
+for word in zen.split():
+    cleaned_list.append(word.strip(".,!-*"))
+
+print(Counter(cleaned_list).most_common(3))
+
+
