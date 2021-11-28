@@ -1,5 +1,6 @@
 import sys
 
+
 a = int(sys.argv[1])
 b = int(sys.argv[2])
 c = int(sys.argv[3])
@@ -16,7 +17,3 @@ else:
     print(int(x1))
     x2 = (-b - Discriminant**0.5)/(2*a)
     print(int(x2))
-
-
-
-
