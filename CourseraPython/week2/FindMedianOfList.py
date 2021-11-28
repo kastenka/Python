@@ -4,7 +4,7 @@ import statistics
 
 def create_list(number_size):
     numbers = []
-    for _ in range(number_size):
+    for _ in range(number_size): # _ тк не нужно знать, какое значение будет у переменной
         numbers.append(random.randint(10, 20))
     return sorted(numbers)
 
