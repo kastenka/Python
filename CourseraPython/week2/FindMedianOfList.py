@@ -2,6 +2,7 @@ import random
 import statistics
 
 
+# Variant 1
 def create_list(number_size):
     numbers = []
     for _ in range(number_size): # _ тк не нужно знать, какое значение будет у переменной
@@ -21,6 +22,7 @@ def find_median_solution1(number_size):
     print(f"Median of list {numbers} is {median}")
 
 
+# Variant 2
 # модуль statistics для вывода медианы списка
 def find_median_solution2(number_size):
     numbers = create_list(number_size)
