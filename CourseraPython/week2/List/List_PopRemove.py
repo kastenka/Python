@@ -19,11 +19,5 @@ print(num_list)  # [1, 2, 3, 4]
 
 print(num_list.remove(1))  # None
 
-
-
-
-
-
-
-
-
+# если элемента в списке нет, то будет возбуждена ошибка ValueError
+num_list.remove(10)  # ValueError: list.remove(x): x not in list
