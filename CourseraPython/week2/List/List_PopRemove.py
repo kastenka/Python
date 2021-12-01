@@ -12,7 +12,7 @@ print(num_list)  # [0, 2, 3, 4]
 print(num_list.pop())  # 4
 print(num_list)  # [0, 2, 3]
 
-# Метод remove - удаляет элемент из списка, не возвращая его
+# Метод remove - удаляет элемент из списка, не возвращая его (возвращает None)
 num_list = list(range(5))  # [0, 1, 2, 3, 4]
 num_list.remove(0)
 print(num_list)  # [1, 2, 3, 4]
