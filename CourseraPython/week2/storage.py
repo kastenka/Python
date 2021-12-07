@@ -13,7 +13,6 @@ def create_args(*args):
 
 def create_file(file_name="storage.data"):
     storage_path = os.path.join(tempfile.gettempdir(), file_name)
-    print(os.path.exists(storage_path))
     if not os.path.exists(storage_path):
         open(storage_path, "w").close()  # создание файла, если его нет
     return storage_path
