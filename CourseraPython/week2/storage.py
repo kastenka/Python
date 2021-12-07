@@ -64,11 +64,11 @@ def get_data(key):
 
 
 arguments = ["--key", "--val"]
-arg_key, arg_val = create_args(*arguments).key, create_args(*arguments).val
+args = create_args(*arguments)
 
 # если введены оба параметра - добавить новое значение и записать в файл
-if arg_key and arg_val:
-    add_data(arg_key, arg_val)  # добавляем данные и записываем в файл
+if args.key and args.val:
+    add_data(args.key, args.val)  # добавляем данные и записываем в файл
 # если введен только ключ - показать значения по данному ключу
-elif arg_key and not arg_val:
-    get_data(arg_key)
+elif args.key and not args.val:
+    get_data(args.key)
