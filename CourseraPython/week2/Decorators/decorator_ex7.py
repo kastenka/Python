@@ -28,6 +28,3 @@ def decorated():
 decorated()
 
 decorated = first_decorator(second_decorator(decorated))
-
-
-
