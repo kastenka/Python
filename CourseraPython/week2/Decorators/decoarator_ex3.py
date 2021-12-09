@@ -1,5 +1,4 @@
 # Что вернется при вызове multiply(10,2)?
-
 def stringify(func):
     print(str(func))  # <function multiply at 0x0000023E4E74A9D0>
     print(type(str(func)))  # <class 'str'>
