@@ -14,5 +14,3 @@ def decorated():
 # в функцию, которую декорируем:
 decorated = decorator(decorated)
 decorated()  # Hello
-
-
