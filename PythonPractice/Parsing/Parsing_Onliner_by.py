@@ -6,20 +6,24 @@ def parse_site(url):
     req = request.urlopen(url)
     html = req.read()
     soup = BeautifulSoup(html, 'html.parser')
-
     parse_object = soup.find_all('div', class_='news-tidings__item')
     return parse_object
 
 
-def write_to_file(data, filename='results.txt'):
-    with open(filename, 'w', encoding='utf-8') as file:
-        for index, item in enumerate(data):
-            file.write(f"{index+1}) {item['title']}\n"
-                       f"Description: {item['description']}\n"
-                       f"Link: {item['link']}"
-                       f"\n\n")
+def write_to_file(func):
+    def wrapped(data, filename='results.txt'):
+        result = func(data)
+        with open(filename, 'w', encoding='utf-8') as file:
+            for index, item in enumerate(result):
+                file.write(f"{index+1}) {item['title']}\n"
+                           f"Description: {item['description']}\n"
+                           f"Link: {item['link']}"
+                           f"\n\n")
+        return result
+    return wrapped
 
 
+@write_to_file
 def get_data(url):
     results = []
     news = parse_site(url)
@@ -40,12 +44,7 @@ def get_data(url):
 def main():
     url = 'https://tech.onliner.by/tag/it-belarus'
     parse_data = get_data(url)
-    write_to_file(parse_data)
 
 
 if __name__ == "__main__":
     main()
-
-
-
-
